@@ -1,4 +1,5 @@
 #utf-8
+#Comentário
 """
 Django settings for eventex project.
 

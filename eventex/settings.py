@@ -16,6 +16,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 from decouple import config, Csv
 from dj_database_url import parse as dburl
+from django.core.mail.backends import smtp
+from django.template.backends import django
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -43,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eventex.core',
+    'eventex.subscriptions'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,3 +108,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
+# E-mail configuration
+EMAIL_BACKEND=config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT',cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS',cast=bool)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')

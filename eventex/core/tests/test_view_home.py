@@ -5,6 +5,8 @@ class HomeTest(TestCase):
     def setUp(self):
         self.response = self.client.get('/')
 
+    #Metodos:
+
     def test_get(self):
         """GET/must return status code 200"""
         self.assertEquals(200,self.response.status_code)
@@ -16,4 +18,3 @@ class HomeTest(TestCase):
     def test_subscription_link(self):
         self.assertContains(self.response, 'href="/inscricao/"')
 
-    #teste

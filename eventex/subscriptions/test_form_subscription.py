@@ -15,4 +15,4 @@ class SubscriptionFormTest(TestCase):
         expected = ['name', 'cpf', 'email', 'phone']
         self.assertSequenceEqual(expected, list(self.form.fields))
 
-# Teste
+

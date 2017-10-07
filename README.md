@@ -1,6 +1,10 @@
 # Eventex
 Sistema de Eventos encomendado pela Morena.
 
+[![Build Status](https://travis-ci.org/victoracioly/eventex-victoracioly.svg?branch=master)](https://travis-ci.org/victoracioly/eventex-victoracioly)
+[![Code Health](https://landscape.io/github/victoracioly/eventex-victoracioly/master/landscape.svg?style=flat)](https://landscape.io/github/victoracioly/eventex-victoracioly/master)
+
+
 ## Como desenvolver?
 
 1. Clone o repositório;

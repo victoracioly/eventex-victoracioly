@@ -20,7 +20,7 @@ git clone git@github.com:victoracioly/eventex-victoracioly.git wttd
 cd wttd
 python -m venv .wttd
 (Windows: .wttd/scripts/activate)(source .wttd/bin/activate)
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 cp contrib/env-sample .env
 python manage.py test
 ```

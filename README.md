@@ -40,6 +40,6 @@ heroku create minhainstancia;
 heroku config:push
 heroku config:set SECRET_KEY=`python contrib/secret_gen.py`(p/ Unix)
 heroku config:set DEBUG=False;
-# Configuro o e-mail;
+Configure o e-mail;
 git push heroku master --force.
 ```

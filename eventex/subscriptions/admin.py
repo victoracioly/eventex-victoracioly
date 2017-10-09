@@ -9,7 +9,7 @@ class SubscriptionModelAdmin(admin.ModelAdmin):
     search_fields = ('name','email','phone','cpf','created_at')
     list_filter = ('created_at',)
     def subscribed_today(self,obj):
-        return obj.created_at == now().date()
+        return obj.created_at.date() == now().date()
 
     subscribed_today.short_description = 'Inscrito Hoje?'
     subscribed_today.boolean = True

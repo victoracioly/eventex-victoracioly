@@ -1,26 +1,24 @@
-# Eventex
-Sistema de Eventos encomendado pela Morena.
+# SIGEMH - Sistema Integrado de Gestão de Equipamentos Médico-Hospitalares
 
-[![Build Status](https://travis-ci.org/victoracioly/eventex-victoracioly.svg?branch=master)](https://travis-ci.org/victoracioly/eventex-victoracioly)
-[![Code Health](https://landscape.io/github/victoracioly/eventex-victoracioly/master/landscape.svg?style=flat)](https://landscape.io/github/victoracioly/eventex-victoracioly/master)
+Projeto __Open Source__ para Gestão de Equipamentos Médico-Hospitalares.
 
+Um projeto piloto está sendo desenvolvido no Hospital Universitário Onofre Lopes - Natal/RN
 
-## Como desenvolver?
+## Sou desenvolvedor, como posso contribuir?
 
-1. Clone o repositório;
-2. Crie um virtualenv com o Python - 3.6.2;
+1. Clone o repositório do GitHub no botão verde;
+2. Crie um ambiente virtual com o Python 3.6 e o Django==1.9.6
 3. Ative o virtualenv;
 4. Instale as dependências;
-5. Configure a instância com o .env
+5. Configure a instância com o `.env`
 6. Execute os testes.
 
-``` Console
-
-git clone git@github.com:victoracioly/eventex-victoracioly.git wttd
-cd wttd
-python -m venv .wttd
-(Windows: .wttd/scripts/activate)(source .wttd/bin/activate)
-pip install -r requirements-dev.txt
+```
+git clone https://github.com/victoracioly/sigemh.git
+cd sigemh
+python3 -m venv .venv
+source .venv/bin/activate (Se for no Windows .venv\Scripts\activate)
+pip install -r requirements.txt
 cp contrib/env-sample .env
 python manage.py test
 ```
@@ -43,3 +41,8 @@ heroku config:set DEBUG=False;
 Configure o e-mail;
 git push heroku master --force.
 ```
+
+
+
+
+

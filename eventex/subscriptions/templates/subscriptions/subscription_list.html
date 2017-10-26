@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+
+{% block content %}
+<!-- OVERVIEW -->
+<section>
+    <div class="content row padding-bottom-3 desktop-12 container">
+        <h1>Inscritos</h1>
+        <div class="desktop-6">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class = "alert sucess">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Equipamento</th>
+                        <th>Patrimônio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for inscrito in inscritos %}
+                    <tr>
+                        <td>{{ inscrito.equipamento }}</td>
+                        <td>{{ inscrito.patrimonio }}</td>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock content %}

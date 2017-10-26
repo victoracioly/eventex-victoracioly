@@ -8,6 +8,10 @@ class Subscription(models.Model):
     email = models.EmailField('E-mail')
     phone = models.CharField('Telefone', max_length=20)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
+    equipamento = models.CharField('nome',max_length=100)
+    patrimonio = models.CharField('nome',max_length=100)
+    numerodeserie = models.CharField('nome',max_length=100)
+
 
     class Meta:
         verbose_name_plural = 'Inscrições'
@@ -16,4 +20,25 @@ class Subscription(models.Model):
 
     def __str__(self):
         return self.name
+
+#class Setor(models.Model):
+#    nome = models.CharField('nome',max_length=100)
+"""
+class Equipamento(models.Model):
+    nome = models.CharField('nome',max_length=100)
+
+class IdEquipamento (models.Model):
+    equipamento = models.ForeignKey(Equipamento)
+    patrimonio = models.CharField('nome',max_length=100)
+    numerodeserie = models.CharField('nome',max_length=100)
+
+"""
+#class Emprestimo(models.Model):
+#    equipamento = models.ForeignKey(Equipamento)
+#    setor = models.ForeignKey(Setor)
+
+#    data_inicio = models.DateTimeField(add)
+#    data_fim = models.DateTimeField(add)
+ #   usuario = models.U
+
 

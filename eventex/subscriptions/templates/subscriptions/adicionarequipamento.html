@@ -4,7 +4,7 @@
 <!-- OVERVIEW -->
 <section>
     <div class="content row padding-bottom-3 desktop-12 container">
-        <h1>Formulário de Inscrição</h1>
+        <h1>Adicionar Equipamento</h1>
         <div class="desktop-6">
             {% if messages %}
                 {% for message in messages %}
@@ -16,7 +16,7 @@
             <form action="." novalidate method="post">
                 {% csrf_token %}
                 {{ form }}
-                <p class="btn-row"><input type="submit" value="Enviar!"/></p>
+                <p class="btn-row"><input type="submit" value="Adicionar"/></p>
             </form>
         </div>
     </div>

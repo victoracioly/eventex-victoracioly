@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY=config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = config('DEBUG',default=False, cast=bool)
+DEBUG = True #config('DEBUG',default=True, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS',default="",cast=Csv())
 DEFAULT_FROM_EMAIL = 'contato@eventex.com.br'
@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
     'test_without_migrations',
     'django_extensions',
     'eventex.core',

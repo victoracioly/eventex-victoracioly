@@ -1,0 +1,54 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>Raio-X Móvel</title>
+</head>
+<body>
+<form action="." method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button type="submit" class="btn btn-primary">
+        {% bootstrap_icon "star" %} Substituir
+    </button>
+</form>
+    {{a}}
+    {{b}}
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Raios-X Móvel</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">001</th>
+          <td>{{b}}</td>
+
+        </tr>
+        <tr>
+          <th scope="row">002</th>
+          <td>UTI Infantil</td>
+
+        </tr>
+        <tr>
+          <th scope="row">003</th>
+          <td>Neurologia</td>
+
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+
+

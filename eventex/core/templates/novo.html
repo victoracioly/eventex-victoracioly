@@ -1,0 +1,17 @@
+{% extends 'nova_base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+    Olá {{ pessoa }}
+
+    <p>Lista de frutas:</p>
+    <ul>
+        {% for fruta in frutas %}
+            <li>{{ fruta }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'outro_novo' %}" target="_blank" class="btn btn-primary">
+        {% bootstrap_icon "star" %} Submit
+    </a>
+{% endblock %}

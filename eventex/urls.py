@@ -15,11 +15,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from eventex.core.views import home
-from eventex.subscriptions.views import subscribe
+from eventex.core.views import home,novo, outronovo
+from eventex.subscriptions.views import subscribe, list, somaab,raioxmovel
 
 urlpatterns = [
     url(r'^$',home),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^inscricao/$',subscribe),
+    url(r'^inscritos/$',list),
+    url(r'^soma/$',somaab),
+    url(r'^novo/$',novo),
+    url(r'^outronovo/$', outronovo, name='outro_novo'),
+    url(r'^raioxmovel/$',raioxmovel),
+ #   url(r'adicionarequipamento/$',Add_Equipamento)
 ]
